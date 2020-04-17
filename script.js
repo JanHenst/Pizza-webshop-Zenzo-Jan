@@ -25,10 +25,12 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById('nav').style.display=('none');
-    document.getElementById('nav-collapse').style.display=('flex');
+    document.getElementById('top').classList.add("nav-collapse-js");
   } else {
-    document.getElementById('nav').style.display=('flex');
-    document.getElementById('nav-collapse').style.display=('none');
+    document.getElementById('top').classList.remove("nav-collapse-js");
   }
+}
+
+function navUnCollapse() {
+    document.getElementById('top').classList.remove("nav-collapse-js"); 
 }

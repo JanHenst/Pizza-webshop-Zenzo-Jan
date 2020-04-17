@@ -139,13 +139,36 @@ a {
     position: fixed;
     display: flex;
     width: calc(100% - 70px);
-    z-index: 9999;
+    z-index: 10000;
+    transition: transform 1s ease,opacity .7s ease;
+}
+.nav-collapse-js .nav-bar .nav  {
+    transform: translateX(-100vw);
+    opacity: 0;
 }
 .nav-collapse {
     position: fixed;
-    display: none;
+    display: flex;
+    opacity: 1;
     z-index: 9999;
 }
+.nav-collapse .logo-div {
+    width: 54px;
+    height: 54px;
+}
+.nav-collapse .logo-div img {
+    margin-left: 3px;
+}
+.nav-collapse .fa-fa-div {
+    width: 40px;
+    margin-left: 10px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.nav-collapse .fa-fa-div img {
+    width: 100%;
+}
+
 
 .logo-div {
     background-color: #fff;
