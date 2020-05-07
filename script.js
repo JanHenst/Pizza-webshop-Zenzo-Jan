@@ -4,22 +4,73 @@ function TopScroll() {
 
 let CartSwitch = false;
 
+let width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+let height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
 function ShowCart() {
     CartSwitch = !CartSwitch;
     if (CartSwitch) {
-        document.getElementById('shopping-cart').style.width=('800px');
+        document.getElementById('show-order').style.width=('60%');
+        document.getElementById('shopping-cart').style.width=('80%');
+        document.getElementById('cart').style.opacity=('1');
         document.getElementById('top').style.overflow=('hidden');
         document.getElementById('black-box').style.width=('100%');
         document.getElementById('black-box').classList.add("card-fade-in");
         document.getElementById('sidebar-left-arrow').style.transform=('rotate(180deg)');
+        if (width < 767) {
+          document.getElementById('show-order').style.width=('100%');
+          document.getElementById('shopping-cart').style.width=('100%');
+        }
     } else {
+        document.getElementById('show-order').style.width=('70px');
         document.getElementById('shopping-cart').style.width=('0px');
+        document.getElementById('cart').style.opacity=('0');
         document.getElementById('top').style.overflow=('');
         document.getElementById('black-box').style.width=('0%');
         document.getElementById('black-box').classList.remove("card-fade-in");
         document.getElementById('sidebar-left-arrow').style.transform=('rotate(360deg)');
     }
 }
+
+function PizzaFilter1() {
+    PizzaFilterReset()
+    document.getElementById('pizza-filter-img-1').style.opacity=('.7');
+    document.getElementById('filter-h2-1').style.color=('#717171');
+    document.getElementById('filter-arrow-1').style.transform=('rotate(90deg)');
+}
+function PizzaFilter2() {
+    PizzaFilterReset()
+    document.getElementById('pizza-filter-img-2').style.opacity=('.7');
+    document.getElementById('filter-h2-2').style.color=('#717171');
+    document.getElementById('filter-arrow-2').style.transform=('rotate(90deg)');
+}
+function PizzaFilter3() {
+    PizzaFilterReset()  
+    document.getElementById('pizza-filter-img-3').style.opacity=('.7');
+    document.getElementById('filter-h2-3').style.color=('#717171');
+    document.getElementById('filter-arrow-3').style.transform=('rotate(90deg)');
+}
+function PizzaFilter4() {
+    PizzaFilterReset()
+    document.getElementById('pizza-filter-img-4').style.opacity=('.7');
+    document.getElementById('filter-h2-4').style.color=('#717171');
+    document.getElementById('filter-arrow-4').style.transform=('rotate(90deg)');
+}
+function PizzaFilterReset() {
+    document.getElementById('pizza-filter-img-1').style.opacity=('1');
+    document.getElementById('pizza-filter-img-2').style.opacity=('1');
+    document.getElementById('pizza-filter-img-3').style.opacity=('1');
+    document.getElementById('pizza-filter-img-4').style.opacity=('1');
+    document.getElementById('filter-arrow-1').style.transform=('rotate(0deg)');
+    document.getElementById('filter-arrow-2').style.transform=('rotate(0deg)');
+    document.getElementById('filter-arrow-3').style.transform=('rotate(0deg)');
+    document.getElementById('filter-arrow-4').style.transform=('rotate(0deg)');
+    document.getElementById('filter-h2-1').style.color=('#fff');
+    document.getElementById('filter-h2-2').style.color=('#fff');
+    document.getElementById('filter-h2-3').style.color=('#fff');
+    document.getElementById('filter-h2-4').style.color=('#fff');
+}
+
 
 window.onscroll = function() {scrollFunction()};
 

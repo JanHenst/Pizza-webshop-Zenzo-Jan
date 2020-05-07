@@ -32,7 +32,7 @@
             </div>
         </div>
     </div>
-    <div class="show-order">
+    <div class="show-order" id="show-order">
         <div class="side-bar" onclick="ShowCart()">
             <div class="sidebar-left-arrow" id="sidebar-left-arrow">&#8592;</div>
             <div class="text-sidebar">
@@ -48,8 +48,27 @@
                    This is text to tell you something.
                 </p>
                 <div class="order">
-
-                    <p>Total: </p>
+                    <div class="order-item-container">
+                        <div id="cartItems">
+                            <div class="order-item" 
+                                 v-for="(cartPizza, index) in cartPizzas" 
+                                 :key="cartPizza.title + index">
+                                <div class="order-item-bigger-content-container">
+                                    <div class="order-item-img-container">
+                                        <img :src="cartPizza.img" alt="">
+                                    </div>
+                                    <div class="order-item-content-container">
+                                        <p>{{cartPizza.title}}</p>
+                                        <button class="order-item-button">Remove</button>
+                                    </div>
+                                </div>
+                                <div class="order-item-price-container">
+                                    <p>€ {{cartPizza.price}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Total: € 80,50</p>
                 </div>
                 <button class="order-button">Order <strong class="order-button-arrow-right">&#8594;</strong></button>
             </div>
@@ -112,6 +131,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="pizza-list-display.js"></script>
+<script src="pizza-card-list-display.js"></script>
 <script src="fade-scroll.js"></script>
 <script src="script.js"></script>
 

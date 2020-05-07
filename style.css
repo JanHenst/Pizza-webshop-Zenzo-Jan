@@ -1,6 +1,7 @@
 html {scroll-behavior: smooth;}
 body {
     margin:0;
+    width: 100%;
     background-color: #060606;
     color: #fff;
     font-family: 'Saira Semi Condensed', sans-serif;
@@ -160,13 +161,14 @@ a {
     margin-left: 3px;
 }
 .nav-collapse .fa-fa-div {
-    width: 40px;
-    margin-left: 10px;
-    margin-top: 8px;
+    width: 55px;
+    background: #060606;
     cursor: pointer;
 }
 .nav-collapse .fa-fa-div img {
-    width: 100%;
+    width: 65%;
+    margin-left: 9px;
+    margin-top: 9px;
 }
 
 
@@ -189,6 +191,7 @@ a {
 
 /*sidebar*/
 .show-order {
+    width: 70px;
     right: 0;
     float: right;
     height: 100%;
@@ -196,7 +199,6 @@ a {
     position: fixed;
     transition: .3s ease background-color;
     display: flex;
-    justify-content: center;
     z-index: 11000;
 }
 .side-bar {
@@ -237,12 +239,17 @@ a {
 /*sidebar content*/
 .shopping-cart {
     width: 0px;
+    overflow: hidden;
+}
+.show-order {
     transition: ease 1s width;
     overflow: hidden;
 }
 .cart {
-    width: 700px;
-    margin-left: 30px;
+    opacity: 0;
+    transition: ease 1s opacity;
+    transition-delay: .5s;
+    margin-left: 20px;
 }
 .cart p {font-size: 20px;}
 .cart h2 {font-size: 35px; font-weight: normal;}
@@ -265,6 +272,7 @@ a {
     border-radius: 2px;
     font-size: 16px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .order-button-arrow-right {
     font-size: 30px;
@@ -339,14 +347,17 @@ a {
     background-color: #717171;
 }
 
+/* pizza filter styling */
 .all-filters {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .pizza-filter {
     background-color: #111111;
-    width: 25%;
+    flex: 100%;
+    max-width: 100%;
     cursor: pointer;
 }
 .pizza-filter:hover .pizza-filter-img img {
@@ -360,7 +371,7 @@ a {
     margin-left: 20px; 
     font-weight: 400;
 }
-.pizza-filter h2 {margin-top: 20px;}
+.pizza-filter h2 {margin-top: 20px; transition: ease .5s color;}
 .pizza-filter p {padding-bottom: 20px; color: #717171;}
 
 .pizza-filter-img {
@@ -370,6 +381,10 @@ a {
 .pizza-filter-img img {
     width: 100%;
     transition: .5s ease;
+}
+#pizza-filter-img-1, #pizza-filter-img-2, #pizza-filter-img-3, #pizza-filter-img-4 {
+    opacity: 1;
+    transition: ease .5s opacity;
 }
 .pizza-filter-text {
     border: 1px solid #222222;
@@ -383,6 +398,7 @@ a {
     margin-left: 50px;
     margin-top: 12px;
     font-size: 40px;
+    transition: ease .5s transform;
 }
 
 .gray-box {
@@ -390,6 +406,27 @@ a {
     width: 100%;
     height: 300px;
     margin-top: -160px;
+}
+
+@media (min-width: 768px) {
+    .pizza-filter {
+      flex: 100%;
+      max-width: 100%;
+    }
+}
+  
+@media (min-width: 992px) {
+    .pizza-filter {
+      flex: 50%;
+      max-width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pizza-filter {
+      flex: 25%;
+      max-width: 25%;
+    }
 }
 
 /* pizza list styling */
@@ -423,6 +460,100 @@ a {
     font-weight: bold;
 }
 
+@media (max-width: 767px) {
+    #TheTest {
+        margin-top: 830px;
+    }    
+    .product__pizza__list__item__container {
+        flex-wrap: wrap;
+    }
+    .product__pizza__list__button__container {
+        position: sticky;
+        width: 100%;
+        background: #060606;
+        padding-top: 10px;
+    }
+    .product__pizza__list__img__container {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .product__pizza__list__text__container {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .cart p {
+        font-size: 16px;
+    }
+    .main {
+        padding-top: 54px;
+        margin-left: 10px;
+        max-width: calc(100% - 90px);
+    }
+    .circle-image {
+        background-size: 880px;
+        background-position: 0px 120px;
+    }
+    .nav {
+        display: unset;
+        height: 100%;
+    }
+    .logo-div {
+        width: 100%;
+        height: 80px;
+    }
+    ul {
+        width: 100%;
+        height: 100%;
+    }
+    .nav li {
+        float: left;
+        margin-left: 110px;
+        width: 37%;
+    }
+    .order-item-price-container {
+        width: 50px;
+    }
+    body .week-all, body .maand-all, body .jaar-all {
+        flex: 100%;
+    }
+    .content-space {
+        margin-top: 25px;
+    }
+    .marker {
+        margin-right: 0px;
+    }
+    .filter-arrow {
+        margin-left: 15px;
+    }
+}
+@media (min-width: 768px) {
+    #TheTest {
+        margin-top: 1470px;
+    }   
+    .cart p {
+        font-size: 16px;
+    } 
+    .circle-image {
+        background-position: 0px 40px;
+    }
+}
+@media (min-width: 992px) {
+    #TheTest {
+        margin-top: 400px;
+    }    
+    .cart p {
+        font-size: 20px;
+    }
+}
+@media (min-width: 1200px) {
+    #TheTest {
+        margin-top: 0px;
+    }   
+    .circle-image {
+        background-position: 400px 40px;
+    } 
+}
+
 
 /* Subscription page*/
 .sub-text h1 {
@@ -442,11 +573,12 @@ a {
 
 .sub-deals {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     justify-content: space-between;
 }
 .week-sub, .maand-sub, .jaar-sub {
-    width: 300px;
+    width: 100px;
     padding-left: 10px;
     background-size: 0px;
 }
@@ -458,7 +590,10 @@ a {
     border-left: 3px solid #777777;
 }
 .week-background:hover, .maand-background:hover, .jaar-background:hover {width: 300px; cursor: pointer;}
-.week-all, .maand-all, .jaar-all {width: 300px;}
+.week-all, .maand-all, .jaar-all {
+    width: 300px;
+    flex: 33%;
+}
 
 
 
@@ -476,4 +611,11 @@ a {
 .top-button {
     color: #fff;
     cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .footer {
+        margin-left: 10px;
+        max-width: calc(100% - 90px);
+    }
 }

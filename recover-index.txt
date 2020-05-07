@@ -32,7 +32,7 @@
             </div>
         </div>
     </div>
-    <div class="show-order" id="show-order">
+    <div class="show-order">
         <div class="side-bar" onclick="ShowCart()">
             <div class="sidebar-left-arrow" id="sidebar-left-arrow">&#8592;</div>
             <div class="text-sidebar">
@@ -88,51 +88,51 @@
                 <p>Our Pizza's</p>
                 <div class="top-line"></div>
             </div>
-            <div class="all-filters">
-                <div class="pizza-filter fadeItem" onclick="PizzaFilter1()">
-                    <div class="pizza-filter-img" id="pizza-filter-img-1">
+            <div class="all-filters fadeItem">
+                <div class="pizza-filter">
+                    <div class="pizza-filter-img">
                         <img src="images/pizza.jpg" alt="">
                     </div>
                     <div class="pizza-filter-text">
                         <div class="header-filter">
-                            <h2 id="filter-h2-1">Pizza 'fijnproevers'</h2>
-                            <div class="filter-arrow" id="filter-arrow-1">&#8594;</div>
+                            <h2>Pizza 'fijnproevers'</h2>
+                            <div class="filter-arrow">&#8594;</div>
                         </div>
                         <p>€ 11,50</p>
                     </div>
                 </div>
-                <div class="pizza-filter fadeItem" onclick="PizzaFilter2()">
-                    <div class="pizza-filter-img" id="pizza-filter-img-2">
+                <div class="pizza-filter">
+                    <div class="pizza-filter-img">
                         <img src="images/pizza.jpg" alt="">
                     </div>
                     <div class="pizza-filter-text">
                         <div class="header-filter">
-                            <h2 id="filter-h2-2">Pizza 'fijnproevers'</h2>
-                            <div class="filter-arrow" id="filter-arrow-2">&#8594;</div>
+                            <h2>Pizza 'fijnproevers'</h2>
+                            <div class="filter-arrow">&#8594;</div>
                         </div>
                         <p>€ 11,50</p>
                     </div>
                 </div>
-                <div class="pizza-filter fadeItem" onclick="PizzaFilter3()">
-                    <div class="pizza-filter-img" id="pizza-filter-img-3">
+                <div class="pizza-filter">
+                    <div class="pizza-filter-img">
                         <img src="images/pizza.jpg" alt="">
                     </div>
                     <div class="pizza-filter-text">
                         <div class="header-filter">
-                            <h2 id="filter-h2-3">Pizza 'fijnproevers'</h2>
-                            <div class="filter-arrow" id="filter-arrow-3">&#8594;</div>
+                            <h2>Pizza 'fijnproevers'</h2>
+                            <div class="filter-arrow">&#8594;</div>
                         </div>
                         <p>€ 11,50</p>
                     </div>
                 </div>
-                <div class="pizza-filter fadeItem" onclick="PizzaFilter4()">
-                    <div class="pizza-filter-img" id="pizza-filter-img-4">
+                <div class="pizza-filter">
+                    <div class="pizza-filter-img">
                         <img src="images/pizza.jpg" alt="">
                     </div>
                     <div class="pizza-filter-text">
                         <div class="header-filter">
-                            <h2 id="filter-h2-4">Pizza 'fijnproevers'</h2>
-                            <div class="filter-arrow" id="filter-arrow-4">&#8594;</div>
+                            <h2>Pizza 'fijnproevers'</h2>
+                            <div class="filter-arrow">&#8594;</div>
                         </div>
                         <p>€ 11,50</p>
                     </div>
@@ -174,3 +174,47 @@
 <script src="script.js"></script>
 
 </html>
+
+
+
+
+
+function TopScroll() {
+    document.getElementById('top').scrollIntoView();
+} 
+
+let CartSwitch = false;
+
+function ShowCart() {
+    CartSwitch = !CartSwitch;
+    if (CartSwitch) {
+        document.getElementById('shopping-cart').style.width=('50%');
+        document.getElementById('top').style.overflow=('hidden');
+        document.getElementById('black-box').style.width=('100%');
+        document.getElementById('black-box').classList.add("card-fade-in");
+        document.getElementById('sidebar-left-arrow').style.transform=('rotate(180deg)');
+    } else {
+        document.getElementById('shopping-cart').style.width=('0px');
+        document.getElementById('top').style.overflow=('');
+        document.getElementById('black-box').style.width=('0%');
+        document.getElementById('black-box').classList.remove("card-fade-in");
+        document.getElementById('sidebar-left-arrow').style.transform=('rotate(360deg)');
+    }
+}
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById('top').classList.add("nav-collapse-js");
+  } else {
+    document.getElementById('top').classList.remove("nav-collapse-js");
+  }
+}
+
+function navUnCollapse() {
+    document.getElementById('top').classList.remove("nav-collapse-js"); 
+}
+
+
+
