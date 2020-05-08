@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="home" id="top" onload="animateHTML().init();">
+<body id="top" onload="animateHTML().init();">
     <div class="nav-bar">
         <div class="nav" id="nav">
             <div class="logo-div">
@@ -17,9 +17,9 @@
                 <a href="">Pizza Bois</a>
             </div>
             <ul>
-                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="subscription.html">Subscription</a></li>
-                <li><a href="order.html">Order</a></li>
+                <li><a class="active" href="order.html">Order</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
         </div>
@@ -76,8 +76,6 @@
     </div>
     <div class="black-box" id="black-box" onclick="ShowCart()"></div>
 
-
-
     <div class="main">
         <div class="circle-image">
             <div class="content-header">
@@ -87,43 +85,83 @@
                 <p class="fadeItem">Get what you need.</p>
             </div>
             <div class="marker">
-                <p>Down here! (Help)</p>
+                <p>Our Pizza's</p>
                 <div class="top-line"></div>
             </div>
-            <div class="home-content-container">
-                <div class="order-home-div fadeItem">
-                    <div class="image-div-home">
-                        <img src="images/Home-pizza.jpg" alt="Home pizza image">
+            <div class="all-filters">
+                <div class="pizza-filter fadeItem" onclick="PizzaFilter1()">
+                    <div class="pizza-filter-img" id="pizza-filter-img-1">
+                        <img src="images/pizza.jpg" alt="">
                     </div>
-                    <h1>Order your pizza</h1>
-                </div>
-                <div class="lil-home-divs">
-                    <div class="free-deal-div fadeItem">
-                        <div class="image-div-home">
-                            <img src="images/Home-pizza.jpg" alt="Home pizza image">
+                    <div class="pizza-filter-text">
+                        <div class="header-filter">
+                            <h2 id="filter-h2-1">Pizza 'fijnproevers'</h2>
+                            <div class="filter-arrow" id="filter-arrow-1">&#8594;</div>
                         </div>
-                        <h1>Take A Free Deal</h1>
-                    </div>
-                    <div class="better-deal-div fadeItem">
-                        <div class="image-div-home">
-                            <img src="images/Home-pizza.jpg" alt="Home pizza image">
-                        </div>
-                        <h1>Take A Better Deal</h1>
+                        <p>€ 11,50</p>
                     </div>
                 </div>
-                <div class="learn-things-div fadeItem">
-                    <div class="image-div-home">
-                        <img src="images/Home-pizza.jpg" alt="Home pizza image">
+                <div class="pizza-filter fadeItem" onclick="PizzaFilter2()">
+                    <div class="pizza-filter-img" id="pizza-filter-img-2">
+                        <img src="images/pizza.jpg" alt="">
                     </div>
-                    <h1>Learn How We Do Things</h1>
+                    <div class="pizza-filter-text">
+                        <div class="header-filter">
+                            <h2 id="filter-h2-2">Pizza 'fijnproevers'</h2>
+                            <div class="filter-arrow" id="filter-arrow-2">&#8594;</div>
+                        </div>
+                        <p>€ 11,50</p>
+                    </div>
+                </div>
+                <div class="pizza-filter fadeItem" onclick="PizzaFilter3()">
+                    <div class="pizza-filter-img" id="pizza-filter-img-3">
+                        <img src="images/pizza.jpg" alt="">
+                    </div>
+                    <div class="pizza-filter-text">
+                        <div class="header-filter">
+                            <h2 id="filter-h2-3">Pizza 'fijnproevers'</h2>
+                            <div class="filter-arrow" id="filter-arrow-3">&#8594;</div>
+                        </div>
+                        <p>€ 11,50</p>
+                    </div>
+                </div>
+                <div class="pizza-filter fadeItem" onclick="PizzaFilter4()">
+                    <div class="pizza-filter-img" id="pizza-filter-img-4">
+                        <img src="images/pizza.jpg" alt="">
+                    </div>
+                    <div class="pizza-filter-text">
+                        <div class="header-filter">
+                            <h2 id="filter-h2-4">Pizza 'fijnproevers'</h2>
+                            <div class="filter-arrow" id="filter-arrow-4">&#8594;</div>
+                        </div>
+                        <p>€ 11,50</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
+    <div class="gray-box"></div>
+    <div class="main">
+        <div id="TheTest">
+            <div v-for="(pizza, index) in pizzas" :key="pizza.title + index"
+                class="product__pizza__list__item__container fadeItem">
+                <div class="product__pizza__list__img__container">
+                    <img :src="pizza.img" alt="pizza image" class="product__pizza__list__img">
+                </div>
+                <div class="product__pizza__list__text__container">
+                    <div class="product__pizza__list__title__container">
+                        <h3>{{pizza.title}}</h3>
+                    </div>
+                    <div class="product__pizza__list__description__container">
+                        <p>{{pizza.description}}</p>
+                    </div>
+                    <div class="product__pizza__list__button__container">
+                        <button class="product__pizza__list__button">+ADD</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="footer">
         <p>@ 2020 PizzaBois</p>
         <p class="top-button" onclick="TopScroll()">Top &uarr;</p>

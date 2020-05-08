@@ -347,6 +347,83 @@ a {
     background-color: #717171;
 }
 
+
+/* Home page */
+.home .footer {
+    margin-top: 880px;
+}
+.home-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.home-content-container img {
+    width: 100%;
+    opacity: .5;
+    transition: .5s ease;
+}
+.order-home-div, .learn-things-div {
+    flex: 100%;
+    cursor: pointer;
+}
+.order-home-div h1, .learn-things-div h1 {
+    margin-top: -100px;
+    margin-left: 30px;
+    position: absolute;
+    font-size: 65px;
+}
+.order-home-div .image-div-home, .learn-things-div .image-div-home {
+    overflow: hidden;
+    height: 300px;
+}
+.order-home-div img, .learn-things-div img {
+    width: 100%;
+    height: auto;
+    margin-top: -340px;   
+}
+.order-home-div {
+    margin-bottom: 50px;
+}
+
+.lil-home-divs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.better-deal-div, .free-deal-div {
+    cursor: pointer;
+    overflow: hidden;
+    height: 525px;
+    width: 850px;
+}
+.better-deal-div .image-div-home, .free-deal-div .image-div-home{
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+}
+.better-deal-div h1, .free-deal-div h1 {
+    margin-top: -100px;
+    margin-left: 30px;
+    position: absolute;
+    font-size: 65px;
+}
+.learn-things-div {
+    margin-top: 50px;
+}
+
+.better-deal-div img:hover, .free-deal-div img:hover {
+    width: 105%;
+    margin-left: -2%;
+    margin-top: -3.1%;
+}
+
+.learn-things-div img:hover, .order-home-div img:hover {
+    width: 103%;
+    margin-left: -1%;
+    margin-top: -20%;
+}
+
+
 /* pizza filter styling */
 .all-filters {
     display: flex;
