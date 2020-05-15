@@ -832,7 +832,7 @@ a {
     border-left: 3px solid #777777;
 }
 
-.free-trial-background:hover {width: 100%; cursor: pointer;}
+.free-trial:hover .free-trial-background {width: 100%; cursor: pointer;}
 
 .sub-deals {
     display: flex;
@@ -852,7 +852,7 @@ a {
     transition: ease .5s width;
     border-left: 3px solid #777777;
 }
-.week-background:hover, .maand-background:hover, .jaar-background:hover {
+.week-all:hover .week-background, .maand-all:hover .maand-background, .jaar-all:hover .jaar-background {
     width: 60%; 
     cursor: pointer;
 }
@@ -865,7 +865,7 @@ a {
     .week-all, .maand-all, .jaar-all {
         width: 100%;
     }
-    .week-background:hover, .maand-background:hover, .jaar-background:hover {
+    .week-all:hover .week-background, .maand-all:hover .maand-background, .jaar-all:hover .jaar-background {
         width: 100%; 
     }
     .free-trial {
