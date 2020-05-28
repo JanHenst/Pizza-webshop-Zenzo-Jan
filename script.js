@@ -75,11 +75,18 @@ function PizzaFilterReset() {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+
+    if (width > 767) {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById('top').classList.add("nav-collapse-js");
+        } else {
+            document.getElementById('top').classList.remove("nav-collapse-js");
+        }
+      }
+}
+
+if (width < 767) {
     document.getElementById('top').classList.add("nav-collapse-js");
-  } else {
-    document.getElementById('top').classList.remove("nav-collapse-js");
-  }
 }
 
 function navUnCollapse() {

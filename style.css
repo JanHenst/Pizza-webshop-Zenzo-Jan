@@ -912,6 +912,246 @@ a {
 }
 
 
+/* Login page and Sign up page */
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+body#top .no-margin {
+    margin: 0;
+}
+
+.inputs {
+    margin-top: 100px;
+}
+.inputs input {
+    background: transparent;
+    border: 0px;
+    border-bottom: 2px solid #777777;
+    font-size: 18px;
+    color: #777777;
+    width: 262px;
+}
+.inputs input::placeholder {
+    color: #777777;
+}
+.inputs input {
+    margin-bottom: 10px;
+}
+
+.remember-button {
+    margin-top: 20px;
+    width: 170px;
+    margin-left: 43%;
+}
+.remember-button label {
+    color: #777777;
+}
+
+.login-button {
+    margin-top: 10px;
+    background: transparent;
+    color: #fff;
+    padding: 10px 100px 10px 100px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .5s ease all;
+}
+.login-button:hover {
+    background: #219EC0;
+    border-color: #219EC0;
+}
+
+.content-header.account {
+    text-align: center;
+}
+.content-header.account p {
+    font-size: 18px;
+    padding: 0 0 0 0px;
+    margin-bottom: 0px;
+}
+.content-header.account a {
+    color: #777777;
+}
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    width: 170px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    margin-top: 4px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: transparent;
+    border: 1px solid #777777;
+    border-radius: 1px;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: transparent;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+ 
+
+@media (max-width: 767px) {
+    .remember-button {
+        margin-left: 11%;
+    }
+}
+@media (max-width: 424px) {
+    .remember-button {
+        margin-left: 5%;
+    }
+}
+@media (max-width: 374px) {
+    .remember-button {
+        margin-left: 3%;
+    }
+    .inputs input {
+        width: 220px;
+    }
+    .login-button {
+        padding: 10px 80px 10px 80px;
+    }
+} 
+@media (min-width: 768px) {
+    .remember-button {
+        margin-left: 28%;
+    }
+}
+@media (min-width: 992px) {
+    .remember-button {
+        margin-left: 35%;
+    }
+}
+@media (min-width: 1200px) {
+    .remember-button {
+        margin-left: 43%;
+    }
+}
+@media (min-width: 1440px) {
+    .remember-button {
+        margin-left: 40%;
+    }
+}
+@media (min-width: 1920px) {
+    .remember-button {
+        margin-left: 43%;
+    }
+}
+@media (min-width: 2560px) {
+    .remember-button {
+        margin-left: 45%;
+    }
+}
+
+
+/* Account info page */
+.account-info-bottom-all {
+    display: flex;
+    flex-wrap: wrap;
+}
+.account-info-bottom-text, .account-info-bottom {
+    flex: 50%;
+}
+.account-info-bottom-text .inputs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.account-info-bottom-text .inputs .input-account {
+    flex: 50%;
+}
+.account-info-bottom-text .inputs .input-account input {
+    width: 300px;
+    padding-bottom: 6px;
+}
+.account-info-bottom-text .inputs .input-account p {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+.account-button {
+    margin-top: 10px;
+    background: transparent;
+    color: #fff;
+    padding: 10px 30px 10px 30px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .5s ease all;
+}
+.account-button:hover {
+    background: #219EC0;
+    border-color: #219EC0;
+}
+.footer.account-footer {
+    margin-top: -130px;
+    padding-top: 0;
+}
+
+
 /* footer */
 .footer {
     margin-left: 110px;
