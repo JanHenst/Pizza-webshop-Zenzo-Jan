@@ -983,7 +983,12 @@ body#top .no-margin {
 }
 .content-header.account a {
     color: #777777;
+    transition: .5s ease color;
 }
+.content-header.account a:hover {
+    color: #219ec0;
+}
+
 
 /* Customize the label (the container) */
 .container {
