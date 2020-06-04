@@ -1157,6 +1157,241 @@ body#top .no-margin {
 }
 
 
+/* Order information */
+.container-order-detail {
+    border-left: 4px solid #777777;
+    padding-left: 10px;
+}
+.container-order-detail tr td:nth-child(2){
+    color: #777777;
+}
+.order-detail-margin {
+    padding-right: 20px;
+}
+.cart-info-container {
+    width: 30%;
+}
+.cart-info-container h2 {
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.order-info-bottom .remember-button label, .payment-container .remember-button label {
+    padding-left: 30px;
+}
+.order-info-bottom .remember-button, .payment-container .remember-button {
+    margin: 0px;
+    margin-top: 30px;
+}
+.order-info-bottom .remember-button .container {
+    width: 250px;
+}
+
+
+/* payment page */
+
+/* The container must be positioned relative: */
+.payment-container {
+    width: 40%;
+}
+
+.payment-method h2, .billing-information h2, .payment-account-info h2, .payment-subscription h2 {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #777777;
+}
+.payment-method p, .billing-information p, .payment-account-info p, .payment-subscription p {
+    margin-top: 5px;
+}
+
+.custom-select {
+    position: relative;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color: transparent;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: #777777;
+    padding: 5px 0px;
+    cursor: pointer;
+  }
+  .select-selected {
+    border-bottom: 1px solid #777777;
+  }
+  .select-items div {
+      padding-left: 5px;
+  }
+
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: #060606;
+    border: 1px solid #777777;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+.security-code {
+    margin-top: 12px;
+}
+.security-code .inputs .input-account input {
+    width: 200px;
+}
+.payment-container .inputs input {
+    border-bottom: 1px solid #777777;
+}
+
+.expiration-dates {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.billing-information-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.first-name, .last-name, .city, .street, .house-number, .postal-code {
+    width: 50%;
+    margin-bottom: 30px;
+}
+.house-number, .postal-code { 
+    margin-bottom: 0;
+}
+
+.payment-container .inputs {
+    margin-top: 0;
+}
+.payment-container .input-account input {
+    width: 250px;
+    margin-bottom: 0;
+}
+.payment-container .input-account p {
+    margin-top: 5px;
+}
+
+.payment-account-info strong {
+    font-weight: 400;
+    color: #777777;
+    font-size: 20px;
+}
+
+.payment-account-info-container {
+    display: flex;
+    justify-content: space-between; 
+}
+.payment-container .remember-button .container {
+    width: 450px;
+}
+
+.payment-footer {
+    margin-top: 500px;
+}
+
+
+/* displays for the sections payment page */
+.payment-card-info, .billing-information, .payment-account-info, .payment-subscription {
+    display: none;
+}
+
+
+@media (max-width: 767px) {
+    .first-name, .last-name, .city, .street, .house-number, .postal-code {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .payment-container {
+        width: 99%;
+    }
+    .payment-container .remember-button .container {
+        width: 250px;
+    }
+    .expiration-dates {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .payment-account-info-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .security-code .inputs .input-account input {
+        width: 250px;
+    }
+    .username-payment-sub, .password-payment-sub, .expiration-month, .expiration-year, .security-code {
+        width: 100%;
+    }
+    .cart-info-container {
+        width: 99%;
+    }
+}
+@media (min-width: 768px) {
+    .payment-container {
+        width: 99%;
+    }
+    .cart-info-container {
+        width: 99%;
+    }
+}
+@media (min-width: 992px) {
+    .payment-container {
+        width: 80%;
+    }
+    .cart-info-container {
+        width: 80%;
+    }
+}
+@media (min-width: 1200px) {
+    .payment-container {
+        width: 50%;
+    }
+    .cart-info-container {
+        width: 50%;
+    }
+}
+@media (min-width: 1550px) {
+    .payment-container {
+        width: 40%;
+    }
+    .cart-info-container {
+        width: 30%;
+    }
+}
+
 /* footer */
 .footer {
     margin-left: 110px;
