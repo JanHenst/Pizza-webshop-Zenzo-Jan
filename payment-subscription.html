@@ -70,7 +70,7 @@
                     </div>
                     <p>Total: € 80,50</p>
                 </div>
-                <button class="order-button" onclick="window.location.href='order-info.html'">Order <strong class="order-button-arrow-right">&#8594;</strong></button>
+                <button class="order-button" onclick="window.location.href='payment-pizza.html'">Order <strong class="order-button-arrow-right">&#8594;</strong></button>
             </div>
         </div>
     </div>
@@ -94,11 +94,12 @@
                               <option value="ideal">iDEAL</option>
                               <option value="ideal">iDEAL</option>
                               <option value="master">Mastercard</option>
+                              <option value="paypal">PayPal</option>
                             </select>
                         </div>
                         <p>Please select a payment method</p>
                         <div class="content-space"></div>
-                        <div class="payment-card-info" id="help">
+                        <div class="payment-card-info" id="payment-card-info">
                             <div class="custom-select noselect" style="width:250px;">
                                 <select>
                                   <option value="0">Example</option>
@@ -140,7 +141,7 @@
                         </div>
                     </div>
                     <div class="content-space"></div>
-                    <div class="billing-information">
+                    <div class="billing-information" id="billing-information">
                         <h2>Billing information</h2>
                         <br>
                         <div class="billing-information-container">
@@ -199,14 +200,22 @@
                                 <select>
                                 <option value="0">ABN Amro</option>
                                 <option value="1">ABN Amro</option>
-                                <option value="2">ASN Bank</option>
+                                <option value="2">ASN bank</option>
+                                <option value="3">brunq</option>
+                                <option value="4">ING</option>
+                                <option value="5">Handelsbanken</option>
+                                <option value="6">Knab</option>
+                                <option value="7">Moneyou</option>
+                                <option value="8">Rabobank</option>
+                                <option value="9">SNS bank</option>
+                                <option value="10">Regio bank</option>
                                 </select>
                             </div>
                             <p>Select a bank</p>
                         </div>
                     </div>
                     <div class="content-space"></div>
-                    <div class="payment-account-info">
+                    <div class="payment-account-info" id="payment-account-info">
                         <h2>Account <strong>Only necessary if you have or are getting a subscription</strong></h2>
                         <br>
                         <div class="payment-account-info-container">
@@ -229,17 +238,18 @@
                         </div>
                     </div>
                     <div class="content-space"></div>
-                    <div class="payment-subscription">
+                    <div class="payment-subscription not-hidden" id="payment-subscription">
                         <h2>Subscription options</h2>
                         <br>
                         <div class="payment-account-info-container">
                             <div class="subscription-type">
                                 <div class="custom-select noselect" style="width:250px;">
                                     <select>
-                                      <option value="0">Week 15%</option>
-                                      <option value="1">Week 15%</option>
-                                      <option value="2">Month 25%</option>
-                                      <option value="3">Month 35%</option>
+                                      <option value="0">Free trial</option>
+                                      <option value="1">Free trial</option>
+                                      <option value="2">Week 15%</option>
+                                      <option value="3">Month 25%</option>
+                                      <option value="4">Month 35%</option>
                                     </select>
                                 </div>
                                 <p>Subscription</p>
@@ -272,7 +282,7 @@
                             <span class="checkmark"></span>
                         </label>
                     </div>
-                    <button class="order-button" onclick="window.location.href='end-order.html'">Continue <strong class="order-button-arrow-right">&#8594;</strong></button>
+                    <button class="order-button" onclick="window.location.href='order-info.html'">Continue <strong class="order-button-arrow-right">&#8594;</strong></button>
                 </div>
             </div>
         </div>

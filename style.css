@@ -1329,6 +1329,10 @@ body#top .no-margin {
     display: none;
 }
 
+.payment-subscription.not-hidden {
+    display: unset;
+}
+
 
 @media (max-width: 767px) {
     .first-name, .last-name, .city, .street, .house-number, .postal-code {
