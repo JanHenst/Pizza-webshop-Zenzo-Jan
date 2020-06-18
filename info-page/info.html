@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza-Boiis</title>
+    <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:300,400,500,600,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/logo.png">
+</head>
+
+<body id="top" onload="animateHTML().init();">
+    <div class="nav-bar">
+        <div class="nav" id="nav">
+            <div class="logo-div">
+                <img href="" src="../images/logo.png" alt="logo">
+                <a href="">Pizza Bois</a>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../subscription-page/subscription.html">Subscription</a></li>
+                <li><a href="../order/order.html">Order</a></li>
+                <li><a href="../account/login.html">Account</a></li>
+                <li><a class="active" href="info.html">Info</a></li>
+            </ul>
+        </div>
+        <div class="nav-collapse" id="nav-collapse">
+            <div class="logo-div">
+                <img href="" src="../images/logo.png" alt="logo">
+            </div> 
+            <div class="fa-fa-div" onclick="navUnCollapse()">
+                <img src="../images/menu-icon.svg" alt="menu icon">
+            </div>
+        </div>
+    </div>
+    <div class="show-order" id="show-order">
+        <div class="side-bar" onclick="ShowCart()">
+            <div class="sidebar-left-arrow" id="sidebar-left-arrow">&#8592;</div>
+            <div class="text-sidebar">
+                <h2 class="rotate">Show</h2>
+                <div class="help-spatie"></div>
+                <h2 class="rotate">order</h2>
+            </div>
+        </div>
+        <div class="shopping-cart" id="shopping-cart">
+            <div class="cart" id="cart">
+                <h2>Cart</h2>
+                <p>
+                   This is an overview of your order.
+                </p>
+                <div class="order">
+                    <div class="order-item-container">
+                        <div id="cartItems">
+                            <div class="order-item" 
+                                 v-for="(cartPizza, index) in cartPizzas" 
+                                 :key="cartPizza.title + index">
+                                <div class="order-item-bigger-content-container">
+                                    <div class="order-item-img-container">
+                                        <img :src="cartPizza.img" alt="">
+                                    </div>
+                                    <div class="order-item-content-container">
+                                        <p>{{cartPizza.title}}</p>
+                                        <button v-on:click.prevent="deleteObject(index)" class="order-item-button">Remove</button>
+                                    </div>
+                                </div>
+                                <div class="order-item-price-container">
+                                    <p>€ {{cartPizza.price}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Total: € 80,50</p>
+                </div>
+                <button class="order-button" onclick="window.location.href='../payment/payment-pizza.html'">Order <strong class="order-button-arrow-right">&#8594;</strong></button>
+            </div>
+        </div>
+    </div>
+    <div class="black-box" id="black-box" onclick="ShowCart()"></div>
+
+
+
+    <div class="main main-info-page">
+        <div class="circle-image">
+            <div class="content-header info-page">
+                <div class="info-page-top">
+                    <h1>How to get a good deal</h1>
+                    <p>Learn how to order a pizza on the official Pizza Bois website.</p>
+                    <div class="line-bottom-sub"></div>
+                </div>
+                <div class="content-space"></div>
+                <div class="sub-order-bottom info-page-content">
+                    <div class="sub-all fadeItem">
+                        <div class="sub-details">
+                            <h1>Step 1</h1>
+                            <p>Go to our <i>Order</i> page.</p>
+                            <p>If you scroll to the top of the page you can see the <i>Order</i> link which you can click on.</p>
+                        </div>
+                    </div>
+                    <div class="sub-all fadeItem">
+                        <div class="sub-details">
+                            <h1>Step 2</h1>
+                            <p>Choose a category.</p>
+                            <p>On the <i>Order</i> page you can choose which category you want by clicking on one of the many categories we provide.</p>
+                        </div>
+                    </div>
+                    <div class="sub-all fadeItem">
+                        <div class="sub-details">
+                            <h1>Step 3</h1>
+                            <p>Choose your favorite pizza.</p>
+                            <p>When you click on the category you want you can see a list of pizza of which you can pick your favorite.</p>
+                        </div>
+                    </div>
+                    <div class="sub-all fadeItem">
+                        <div class="sub-details">
+                            <h1>Step 4</h1>
+                            <p>Open your cart.</p>
+                            <p>On the right side on your screen there is a <i>Show order</i> bar on which you can click.</p>
+                        </div>
+                    </div>
+                    <div class="sub-all fadeItem">
+                        <div class="sub-details">
+                            <h1>Step 5</h1>
+                            <p>Press the order button.</p>
+                            <p>
+                                After you clicked on the bar to open your cart you can see all the pizza's you picked en how much they cost. 
+                                On the bottom you can see a button which brings you to the payment page.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sub-all fadeItem">
+                        <div class="sub-details">
+                            <h1>Step 6</h1>
+                            <p>Follow the instructions.</p>
+                            <p>Follow the instructions on the screen by filling in your payment information and confirming your order.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-page-bottom">
+                    <h1>How to get a better deal</h1>
+                    <p>Learn how to order a pizza and save money on the official Pizza Bois website.</p>
+                    <div class="line-bottom-sub"></div>
+                </div>
+                <div class="content-space"></div>
+                <div class="sub-order-bottom info-page-content">
+                    <div class="sub-all fadeItem">
+                        <div class="sub-details">
+                            <h1>Step 1</h1>
+                            <p>Go to our <i>Account</i> page.</p>
+                            <p>If you scroll to the top of the page you can see the <i>Account</i> link which you can click on.</p>
+                        </div>
+                    </div>
+                    <div class="sub-all fadeItem">
+                        <div class="sub-details">
+                            <h1>Step 2</h1>
+                            <p>Create your account.</p>
+                            <p>When you are on the <i>Login</i> page you can see on the bottom a link to go to the <i>Sign up</i> page to create your account by filling in your information.</p>
+                        </div>
+                    </div>
+                    <div class="sub-all fadeItem">
+                        <div class="sub-details">
+                            <h1>Step 3</h1>
+                            <p>Go to our <i>Subscription</i> page.</p>
+                            <p>If you scroll to the top of the page you can see the <i>Subscription</i> link which you can click on.</p>
+                        </div>
+                    </div>
+                    <div class="sub-all fadeItem">
+                        <div class="sub-details">
+                            <h1>Step 4</h1>
+                            <p>Choose a subscription.</p>
+                            <p>There are four subscription you can see on the <i>Subscription</i> page. You can choose which of the four you want by clicking on one of them.</p>
+                        </div>
+                    </div>
+                    <div class="sub-all fadeItem">
+                        <div class="sub-details">
+                            <h1>Step 5</h1>
+                            <p>Press the order button.</p>
+                            <p>After having selected a subscription of your choosing, you will be redirected to the information page of that subscription. On this page there is a order button which will bring you to the <i>Payment</i> page after being clicked on.</p>
+                        </div>
+                    </div>
+                    <div class="sub-all fadeItem">
+                        <div class="sub-details">
+                            <h1>Step 6</h1>
+                            <p>Follow the instructions.</p>
+                            <p>Follow the instructions on the screen by filling in your payment information, your account information and confirming your order.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="footer">
+        <div class="footer-bottom">
+            <p>@ 2020 PizzaBois</p>
+            <p class="top-button" onclick="TopScroll()">Top &uarr;</p>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="../js/pizza-list-display.js"></script>
+<script src="../js/pizza-card-list-display.js"></script>
+<script src="../fade-scroll.js"></script>
+<script src="../js/script.js"></script>
+
+</html>

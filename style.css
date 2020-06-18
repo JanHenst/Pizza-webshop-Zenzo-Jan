@@ -158,7 +158,7 @@ a {
     height: 54px;
 }
 .nav-collapse .logo-div img {
-    margin-left: 3px;
+    margin-left: 4px;
 }
 .nav-collapse .fa-fa-div {
     width: 55px;
@@ -187,6 +187,7 @@ a {
 .logo-div a:visited {color:#060606;}
 .logo-div img {
     height: 45px;
+    margin-left: 5px;
 }
 
 /*sidebar*/
@@ -324,6 +325,47 @@ a {
     max-width: 70px;
 }
 
+.list-enter-active,
+.list-leave-active {
+    transition: all 1s;
+}
+.list-enter,
+.list-leave-to
+
+/* .list-leave-active below version 2.1.8 */
+    {
+    transform: translateX(-100%);
+}
+.linkListSlide-enter-active,
+.linkListSlide-leave-active {
+    transition: .5s;
+    margin-left: 0px;
+}
+
+.linkListSlide-enter,
+.linkListSlide-leave-to {
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.shake-arrow {
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: rotate(0deg)    scale(1.1); }
+    12% { transform: rotate(20deg)  scale(1.2); }
+    25% { transform: rotate(0)      scale(1.3); }
+    37% { transform: rotate(-20deg) scale(1.4); }
+    50% { transform: rotate(0deg)   scale(1.5); }
+    62% { transform: rotate(10deg)  scale(1.4); }
+    75% { transform: rotate(0)      scale(1.3); }
+    87% { transform: rotate(-10deg) scale(1.2); }
+    95% { transform: rotate(-10deg) scale(1.1); }
+    100% { transform: rotate(0deg)  scale(1);   }
+  }
+
 /*main*/
 .main {
     padding-top: 54px;
@@ -435,13 +477,15 @@ a {
 @media (max-width: 767px) {
     .better-deal-div h1, 
     .free-deal-div h1 {
-        font-size: 40px;
+        font-size: 6vw;
         margin-top: -70px;
+        margin-left: 5px;
     }
     .order-home-div h1, 
     .learn-things-div h1 {
-        font-size: 40px;
+        font-size: 6vw;
         margin-top: -70px;
+        margin-left: 5px;
     }
     .lil-home-divs {
         flex-wrap: wrap;
@@ -481,6 +525,16 @@ a {
     .better-deal-div .image-div-home,
     .free-deal-div .image-div-home {
         height: 220px;
+    }
+    .better-deal-div .image-div-home, 
+    .free-deal-div .image-div-home, 
+    .order-home-div .image-div-home, 
+    .learn-things-div .image-div-home {
+        width: 180%;
+        margin-left: -110px;
+    }
+    .footer-home.footer-top {
+        margin-top: 200px;
     }
 }
 @media (min-width: 768px) {
@@ -685,16 +739,35 @@ a {
     max-height: 200px;
 }
 
+.product__pizza__list__title__container i {
+    color: #219EC0;
+}
+
 .product__pizza__list__text__container {
     position: relative;
     overflow: auto;
     max-height: 200px;
+    max-width: 600px;
     margin-left: 10px;
 }
 
 .product__pizza__list__button__container {
     position: absolute;
     bottom: 0;
+}
+
+
+.pizza-list-order-page {
+    animation: ease 1s;
+    animation-name: fade-in-order-list;
+    animation-duration: 1s;
+}
+.hidden-list {
+    display: none;
+}
+@keyframes fade-in-order-list {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 
@@ -707,7 +780,7 @@ a {
 }
 
 @media (max-width: 767px) {
-    #TheTest {
+    #order-list {
         margin-top: 830px;
     }    
     .product__pizza__list__item__container {
@@ -771,9 +844,24 @@ a {
     .filter-arrow {
         margin-left: 15px;
     }
+    .main.main-order {
+        margin-top: 900px;
+    }
 }
+
+@media (max-width: 424px) {
+    .main.main-order {
+        margin-top: 800px;
+    }
+}
+@media (max-width: 374px) {
+    .main.main-order {
+        margin-top: 680px;
+    }
+}
+
 @media (min-width: 768px) {
-    #TheTest {
+    #order-list {
         margin-top: 1470px;
     }   
     .cart p {
@@ -782,33 +870,47 @@ a {
     .circle-image {
         background-position: 0px 40px;
     }
+    .main.main-order {
+        margin-top: 1500px;
+    }
 }
 @media (min-width: 992px) {
-    #TheTest {
+    #order-list {
         margin-top: 400px;
     }    
     .cart p {
         font-size: 20px;
     }
+    .main.main-order {
+        margin-top: 350px;
+    }
 }
 @media (min-width: 1200px) {
-    #TheTest {
+    #order-list {
         margin-top: 0px;
     }   
     .circle-image {
         background-position: 400px 40px;
     } 
+    .main.main-order {
+        margin-top: 0px;
+    }
 }
 
+@media (min-width: 2560px) {
+    .main.main-order {
+        margin-top: 100px;
+    }    
+}
 
 /* Subscription page*/
 .sub-text h1 {
     margin-bottom: 0;
-    font-size: 35px;
+    font-size: 40px;
 }
 .sub-text p {
     margin-top: 0;
-    color: #717171;
+    color: #777777;
 }
 .line-bottom-sub {
     margin-top: 20px;
@@ -817,22 +919,30 @@ a {
     border-bottom: 1px solid gray;
 }
 
-.free-trial {
+.Free-trial h1, .sub-deals h1 {
+    font-size: 40px;
+}
+.Free-trial p, .sub-deals p {
+    font-size: 20px;
+    color: #777777;
+}
+
+.Free-trial {
     width: 70%;
 }
-.free-trial-sub {
+.Free-trial-sub {
     width: 300px;
     padding-left: 10px;
     background-size: 0px;
 }
-.free-trial-background {
+.Free-trial-background {
     width: 0%;
     background-color: #111111;
     transition: ease .5s width;
-    border-left: 3px solid #777777;
+    border-left: 3px solid #222222;
 }
 
-.free-trial:hover .free-trial-background {width: 100%; cursor: pointer;}
+.Free-trial:hover .Free-trial-background {width: 100%; cursor: pointer;}
 
 .sub-deals {
     display: flex;
@@ -850,7 +960,7 @@ a {
     width: 0px;
     background-color: #111111;
     transition: ease .5s width;
-    border-left: 3px solid #777777;
+    border-left: 3px solid #222222;
 }
 .week-all:hover .week-background, .maand-all:hover .maand-background, .jaar-all:hover .jaar-background {
     width: 60%; 
@@ -868,17 +978,17 @@ a {
     .week-all:hover .week-background, .maand-all:hover .maand-background, .jaar-all:hover .jaar-background {
         width: 100%; 
     }
-    .free-trial {
+    .Free-trial {
         width: 100%;
     }
 }
 @media (min-width: 992px) {
-    .free-trial-background {
+    .Free-trial-background {
         transition: ease 1s width;
     }
 }
 @media (min-width: 1200px) {
-    .free-trial-sub {
+    .Free-trial-sub {
         width: 1000px;
     }
 }
@@ -896,7 +1006,7 @@ a {
     margin-bottom: 20px;
 }
 .sub-all {
-    border-left: 3px solid #777777;
+    border-left: 4px solid #222222;
 }
 .sub-details {
     padding-left: 10px;
@@ -1159,7 +1269,7 @@ body#top .no-margin {
 
 /* Order information */
 .container-order-detail {
-    border-left: 4px solid #777777;
+    border-left: 4px solid #222222;
     padding-left: 10px;
 }
 .container-order-detail tr td:nth-child(2){
@@ -1187,12 +1297,25 @@ body#top .no-margin {
     width: 250px;
 }
 
+.order-info-price i {
+    font-style: normal;
+    text-decoration: line-through;
+    color: #777777;
+}
+.order-item-price-container i {
+    font-style: normal;
+    color: #777777;
+}
 
 /* payment page */
 
 /* The container must be positioned relative: */
 .payment-container {
     width: 40%;
+}
+
+.sub-order-top.payment-top p, .sub-order-top.account-info-top p, .sub-order-top.order-info-top p {
+    color: #777777;
 }
 
 .payment-method h2, .billing-information h2, .payment-account-info h2, .payment-subscription h2 {
@@ -1395,6 +1518,95 @@ body#top .no-margin {
         width: 30%;
     }
 }
+
+
+/* info page */ 
+.info-page-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.info-page-top p, .info-page-bottom p {
+    color: #777777;
+}
+.info-page-content .sub-all {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.info-page-content .sub-details p:nth-child(3) {
+    color: #777777;
+}
+
+.content-header.info-page {
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .main.main-info-page {
+        margin-bottom: 1900px;
+    }
+}
+
+@media (max-width: 374px) {
+    .main.main-info-page {
+        margin-bottom: 2200px;
+    }
+}
+
+@media (min-width: 768px) {
+    .info-page-content .sub-all {
+        width: 100%;
+    }
+    .info-page-content {
+        width: 100%;
+    }
+    .main.main-info-page {
+        margin-bottom: 1400px;
+    }
+}
+@media (min-width: 992px) {
+    .info-page-content .sub-all {
+        width: 48%;
+        margin-left: 10px;
+    }
+    .info-page-content {
+        width: 100%;
+    }
+    .main.main-info-page {
+        margin-bottom: 420px;
+    }
+}
+@media (min-width: 1200px) {
+    .info-page-content {
+        width: 100%;
+    }
+    .info-page-content .sub-all {
+        width: 32%;
+    }
+    .main.main-info-page {
+        margin-bottom: 0px;
+    }
+}
+@media (min-width: 1440px) {
+    .info-page-content {
+        width: 100%;
+    }
+}
+@media (min-width: 1920px) {
+    .info-page-content {
+        width: 80%;
+    }
+}
+@media (min-width: 2560px) {
+    .info-page-content {
+        width: 50%;
+    }
+    .main.main-info-page {
+        margin-bottom: 50px;
+    }
+}
+
 
 /* footer */
 .footer {

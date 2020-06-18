@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:300,400,500,600,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/logo.png">
 </head>
 
 <body id="top" onload="animateHTML().init();">
@@ -18,9 +20,10 @@
             </div>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../subscription.html">Subscription</a></li>
-                <li><a href="../order.html">Order</a></li>
-                <li><a href="../login.html">Account</a></li>
+                <li><a class="active" href="subscription.html">Subscription</a></li>
+                <li><a href="../order/order.html">Order</a></li>
+                <li><a href="../account/login.html">Account</a></li>
+                <li><a href="../info-page/info.html">Info</a></li>
             </ul>
         </div>
         <div class="nav-collapse" id="nav-collapse">
@@ -45,7 +48,7 @@
             <div class="cart" id="cart">
                 <h2>Cart</h2>
                 <p>
-                   This is text to tell you something.
+                   This is an overview of your order.
                 </p>
                 <div class="order">
                     <div class="order-item-container">
@@ -59,7 +62,7 @@
                                     </div>
                                     <div class="order-item-content-container">
                                         <p>{{cartPizza.title}}</p>
-                                        <button class="order-item-button">Remove</button>
+                                        <button v-on:click.prevent="deleteObject(index)" class="order-item-button">Remove</button>
                                     </div>
                                 </div>
                                 <div class="order-item-price-container">
@@ -70,7 +73,7 @@
                     </div>
                     <p>Total: € 80,50</p>
                 </div>
-                <button class="order-button" onclick="window.location.href='../payment-pizza.html'">Order <strong class="order-button-arrow-right">&#8594;</strong></button>
+                <button class="order-button" onclick="window.location.href='../payment/payment-pizza.html'">Order <strong class="order-button-arrow-right">&#8594;</strong></button>
             </div>
         </div>
     </div>
@@ -88,10 +91,9 @@
             <div class="sub-order-bottom-text">
                 <p>Every week / Permanent 15% discount / For only € 1,00</p>
                 <p>
-                    Get what you need. Get what you need. Get what you need. Get what you need. <br>
-                    Get what you need. Get what you need. Get what you need. Get what you need. <br>
-                    Get what you need. Get what you need. Get what you need. Get what you need. <br>
-                    Get what you need. Get what you need. Get what you need. Get what you need.
+                    If you get the Week subscription you will recieve a permanent 15% discount on all of your future orders! <br>
+                    This will let you safe money on your pizza's for only € 1,00 per week. Which you can change at any given time to fit your lifestyle  <br>
+                    Plus you will be directly supporting us, making it possible for us to provide more high quality pizza's to more people.
                 </p>
             </div>
             <div class="sub-order-bottom">
@@ -100,7 +102,7 @@
                         <h1>Subscription Deal:</h1>
                         <h1>Week 15%</h1>
                         <p>- € 1,00</p>
-                        <button class="order-button" onclick="window.location.href='../payment-subscription.html'">Order <strong class="order-button-arrow-right">&#8594;</strong></button>
+                        <button class="order-button" onclick="window.location.href='../payment/payment-subscription.html'">Order <strong class="order-button-arrow-right">&#8594;</strong></button>
                     </div>
                 </div>
             </div>
@@ -113,10 +115,10 @@
         <div class="footer-top">
             <h2 class="footer-title-big">Pizza Bois</h2>
             <br>
-            <h2 class="footer-title">Have a better deal in mind? let's <a class="footer-a-big" href="../subscription.html">take a look at <br class="hidden-xs hidden-sm hidden-md"> our best deals</a>.</h2>
+            <h2 class="footer-title">Have a better deal in mind? let's <a class="footer-a-big" href="../subscription-page/subscription.html">take a look at <br class="hidden-xs hidden-sm hidden-md"> our best deals</a>.</h2>
             <p>
                 Or if you just want to get some delicious pizza <br>
-                you can look at <a class="footer-a-small" href="../order.html">Our collection</a>.
+                you can look at <a class="footer-a-small" href="../order/order.html">Our collection</a>.
             </p>
         </div>
         <div class="footer-bottom">
@@ -126,9 +128,9 @@
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="../pizza-list-display.js"></script>
-<script src="../pizza-card-list-display.js"></script>
+<script src="../js/pizza-list-display.js"></script>
+<script src="../js/pizza-card-list-display.js"></script>
 <script src="../fade-scroll.js"></script>
-<script src="../script.js"></script>
+<script src="../js/script.js"></script>
 
 </html>

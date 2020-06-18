@@ -20,8 +20,8 @@
             </div>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a class="active" href="subscription.html">Subscription</a></li>
-                <li><a href="../order/order.html">Order</a></li>
+                <li><a href="../subscription-page/subscription.html">Subscription</a></li>
+                <li><a class="active" href="order.html">Order</a></li>
                 <li><a href="../account/login.html">Account</a></li>
                 <li><a href="../info-page/info.html">Info</a></li>
             </ul>
@@ -79,38 +79,92 @@
     </div>
     <div class="black-box" id="black-box" onclick="ShowCart()"></div>
 
-
-    
-
     <div class="main">
-        <div class="sub-order">
-            <div class="sub-order-top">
-                <h1>Pay less, Get more.</h1>
-                <div class="line-bottom-sub"></div>
+        <div class="circle-image">
+            <div class="content-header">
+                <h1 class="fadeItem">Tasty. High Quality. <br> Pizza.</h1>
+                <br>
+                <p class="fadeItem">Order what you want.</p>
+                <p class="fadeItem">Get what you need.</p>
             </div>
-            <div class="sub-order-bottom-text">
-                <p>Every month / Permanent 25% discount / For only € 5,00</p>
-                <p>
-                    If you get the Month subscription you will recieve a permanent 25% discount on all of your future orders! <br>
-                    This will let you safe money on your pizza's for only € 5,00 per month. Which you can change at any given time to fit your lifestyle  <br>
-                    Plus you will be directly supporting us, making it possible for us to provide more high quality pizza's to more people.
-                </p>
+            <div class="marker">
+                <p>Our Pizza's</p>
+                <div class="top-line"></div>
             </div>
-            <div class="sub-order-bottom">
-                <div class="sub-all fadeItem">
-                    <div class="sub-details">
-                        <h1>Subscription Deal:</h1>
-                        <h1>Month 25%</h1>
-                        <p>- € 5,00</p>
-                        <button class="order-button" onclick="window.location.href='../payment/payment-subscription.html'">Order <strong class="order-button-arrow-right">&#8594;</strong></button>
+            <div class="all-filters">
+                <div class="pizza-filter fadeItem" onclick="PizzaFilter1()">
+                    <div class="pizza-filter-img" id="pizza-filter-img-1">
+                        <img src="../images/pizza.jpg" alt="">
+                    </div>
+                    <div class="pizza-filter-text">
+                        <div class="header-filter">
+                            <h2 id="filter-h2-1">Traditional Pizza's</h2>
+                            <div class="filter-arrow" id="filter-arrow-1">&#8594;</div>
+                        </div>
+                        <p>€ 11,50</p>
+                    </div>
+                </div>
+                <div class="pizza-filter fadeItem" onclick="PizzaFilter2()">
+                    <div class="pizza-filter-img" id="pizza-filter-img-2">
+                        <img src="../images/pizza.jpg" alt="">
+                    </div>
+                    <div class="pizza-filter-text">
+                        <div class="header-filter">
+                            <h2 id="filter-h2-2">Vegan Pizza's</h2>
+                            <div class="filter-arrow" id="filter-arrow-2">&#8594;</div>
+                        </div>
+                        <p>€ 11,50</p>
+                    </div>
+                </div>
+                <div class="pizza-filter fadeItem" onclick="PizzaFilter3()">
+                    <div class="pizza-filter-img" id="pizza-filter-img-3">
+                        <img src="../images/pizza.jpg" alt="">
+                    </div>
+                    <div class="pizza-filter-text">
+                        <div class="header-filter">
+                            <h2 id="filter-h2-3">Meat Pizza's</h2>
+                            <div class="filter-arrow" id="filter-arrow-3">&#8594;</div>
+                        </div>
+                        <p>€ 11,50</p>
+                    </div>
+                </div>
+                <div class="pizza-filter fadeItem" onclick="PizzaFilter4()">
+                    <div class="pizza-filter-img" id="pizza-filter-img-4">
+                        <img src="../images/pizza.jpg" alt="">
+                    </div>
+                    <div class="pizza-filter-text">
+                        <div class="header-filter">
+                            <h2 id="filter-h2-4">Fish Pizza's</h2>
+                            <div class="filter-arrow" id="filter-arrow-4">&#8594;</div>
+                        </div>
+                        <p>€ 11,50</p>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
-
+    <div class="gray-box"></div>
+    <div class="main main-order">
+        <div id="order-list" class="hidden-list">
+            <div v-for="(pizza, index) in pizzas" :key="pizza.title + index"
+                class="product__pizza__list__item__container fadeItem">
+                <div class="product__pizza__list__img__container">
+                    <img :src="pizza.img" alt="pizza image" class="product__pizza__list__img">
+                </div>
+                <div class="product__pizza__list__text__container">
+                    <div class="product__pizza__list__title__container">
+                        <h3><span v-html="pizza.title"></span></h3>
+                    </div>
+                    <div class="product__pizza__list__description__container">
+                        <p>{{pizza.description}}</p>
+                    </div>
+                    <div class="product__pizza__list__button__container">
+                        <button onclick="addCart()" class="product__pizza__list__button">+ADD</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="footer">
         <div class="footer-top">
             <h2 class="footer-title-big">Pizza Bois</h2>
