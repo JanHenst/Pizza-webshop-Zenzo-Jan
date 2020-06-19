@@ -325,6 +325,12 @@ a {
     max-width: 70px;
 }
 
+@media (max-width: 767px) {
+    .order-button {
+        margin-bottom: 20px;
+    }
+}
+
 .list-enter-active,
 .list-leave-active {
     transition: all 1s;
@@ -1484,6 +1490,19 @@ body#top .no-margin {
     }
     .cart-info-container {
         width: 99%;
+    }
+    .payment-sub-footer {
+        margin-top: 940px;
+    }
+}
+@media (max-width: 424px) {
+    .payment-sub-footer {
+        margin-top: 900px;
+    }
+}
+@media (max-width: 374px) {
+    .payment-sub-footer {
+        margin-top: 1040px;
     }
 }
 @media (min-width: 768px) {
