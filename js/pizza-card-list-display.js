@@ -3,52 +3,40 @@ new Vue({
     data: {
         cartPizzas: [
             {
-                title:       'Pizza Carpaccio di Bresoala',
-                description: 'Verse dunne pizza in steenoven gebakken met 100% natuurlijke mozzarella, pomodorisaus en gegarneerd met runderhaas (Bresoala uit Valtellinastreek in Lombardije), rucola, pijnboompitten, gedroogde tomaten en grana padano (parmezaan uit povlakte)',
+                title:       'Pizza Salami',
+                description: 'Fresh thin pizza in a brick oven baked with 100% natural mozzarella, pomodori sauce and topped with beef tenderloin (Bresoala from Valtellina region in Lombardy), arugula, pine nuts, dried tomatoes and grana padano (parmesan from po plain).',
                 price:       '11,50',
                 img:         'images/vierkant-pizza.jpg'
             },
             {
                 title:       'Pizza Carpaccio di Bresoala',
-                description: 'Verse dunne pizza in steenoven gebakken met 100% natuurlijke mozzarella, pomodorisaus en gegarneerd met runderhaas (Bresoala uit Valtellinastreek in Lombardije), rucola, pijnboompitten, gedroogde tomaten en grana padano (parmezaan uit povlakte)',
+                description: 'Fresh thin pizza in a brick oven baked with 100% natural mozzarella, pomodori sauce and topped with beef tenderloin (Bresoala from Valtellina region in Lombardy), arugula, pine nuts, dried tomatoes and grana padano (parmesan from po plain).',
                 price:       '11,50',
-                img:         'images/vierkant-pizza.jpg'
+                img:         'images/pizza-list-2.jpg'
             },
             {
-                title:       'Pizza Carpaccio di Bresoala',
-                description: 'Verse dunne pizza in steenoven gebakken met 100% natuurlijke mozzarella, pomodorisaus en gegarneerd met runderhaas (Bresoala uit Valtellinastreek in Lombardije), rucola, pijnboompitten, gedroogde tomaten en grana padano (parmezaan uit povlakte)',
+                title:       'Pizza Onion',
+                description: 'Fresh thin pizza in a brick oven baked with 100% natural mozzarella, pomodori sauce and topped with beef tenderloin (Bresoala from Valtellina region in Lombardy), arugula, pine nuts, dried tomatoes and grana padano (parmesan from po plain).',
                 price:       '11,50',
-                img:         'images/vierkant-pizza.jpg'
+                img:         'images/pizza-list-5.jpg'
             },
             {
-                title:       'Pizza Carpaccio di Bresoala',
-                description: 'Verse dunne pizza in steenoven gebakken met 100% natuurlijke mozzarella, pomodorisaus en gegarneerd met runderhaas (Bresoala uit Valtellinastreek in Lombardije), rucola, pijnboompitten, gedroogde tomaten en grana padano (parmezaan uit povlakte)',
+                title:       'Pizza Salad',
+                description: 'Fresh thin pizza in a brick oven baked with 100% natural mozzarella, pomodori sauce and topped with beef tenderloin (Bresoala from Valtellina region in Lombardy), arugula, pine nuts, dried tomatoes and grana padano (parmesan from po plain).',
                 price:       '11,50',
-                img:         'images/vierkant-pizza.jpg'
+                img:         'images/pizza-list-4.jpg'
             },
             {
-                title:       'Pizza Carpaccio di Bresoala',
-                description: 'Verse dunne pizza in steenoven gebakken met 100% natuurlijke mozzarella, pomodorisaus en gegarneerd met runderhaas (Bresoala uit Valtellinastreek in Lombardije), rucola, pijnboompitten, gedroogde tomaten en grana padano (parmezaan uit povlakte)',
+                title:       'Pizza Mushroom',
+                description: 'Fresh thin pizza in a brick oven baked with 100% natural mozzarella, pomodori sauce and topped with beef tenderloin (Bresoala from Valtellina region in Lombardy), arugula, pine nuts, dried tomatoes and grana padano (parmesan from po plain).',
                 price:       '11,50',
-                img:         'images/vierkant-pizza.jpg'
+                img:         'images/pizza-list-3.jpg'
             },
             {
-                title:       'Pizza Carpaccio di Bresoala',
-                description: 'Verse dunne pizza in steenoven gebakken met 100% natuurlijke mozzarella, pomodorisaus en gegarneerd met runderhaas (Bresoala uit Valtellinastreek in Lombardije), rucola, pijnboompitten, gedroogde tomaten en grana padano (parmezaan uit povlakte)',
+                title:       'Pizza Margarita',
+                description: 'Fresh thin pizza in a brick oven baked with 100% natural mozzarella, pomodori sauce and topped with beef tenderloin (Bresoala from Valtellina region in Lombardy), arugula, pine nuts, dried tomatoes and grana padano (parmesan from po plain).',
                 price:       '11,50',
-                img:         'images/vierkant-pizza.jpg'
-            },
-            {
-                title:       'Pizza Carpaccio di Bresoala',
-                description: 'Verse dunne pizza in steenoven gebakken met 100% natuurlijke mozzarella, pomodorisaus en gegarneerd met runderhaas (Bresoala uit Valtellinastreek in Lombardije), rucola, pijnboompitten, gedroogde tomaten en grana padano (parmezaan uit povlakte)',
-                price:       '11,50',
-                img:         'images/vierkant-pizza.jpg'
-            },
-            {
-                title:       'Pizza Carpaccio di Bresoala',
-                description: 'Verse dunne pizza in steenoven gebakken met 100% natuurlijke mozzarella, pomodorisaus en gegarneerd met runderhaas (Bresoala uit Valtellinastreek in Lombardije), rucola, pijnboompitten, gedroogde tomaten en grana padano (parmezaan uit povlakte)',
-                price:       '11,50',
-                img:         'images/vierkant-pizza.jpg'
+                img:         'images/pizza-list-1.jpg'
             },
             
         ],
@@ -67,34 +55,34 @@ new Vue({
     data: {
         cartPizzasTwee: [
             {
-                title:       'Pizza Carpaccio di Bresoala',
-                description: 'Verse dunne pizza in steenoven gebakken met 100% natuurlijke mozzarella, pomodorisaus en gegarneerd met runderhaas (Bresoala uit Valtellinastreek in Lombardije), rucola, pijnboompitten, gedroogde tomaten en grana padano (parmezaan uit povlakte)',
+                title:       'Pizza Margarita',
+                description: 'Fresh thin pizza in a brick oven baked with 100% natural mozzarella, pomodori sauce and topped with beef tenderloin (Bresoala from Valtellina region in Lombardy), arugula, pine nuts, dried tomatoes and grana padano (parmesan from po plain).',
                 price:       '€ 11,50 <i>-15%</i>',
-                img:         'images/vierkant-pizza.jpg'
+                img:         'images/pizza-list-1.jpg'
             },
             {
                 title:       'Pizza Carpaccio di Bresoala',
-                description: 'Verse dunne pizza in steenoven gebakken met 100% natuurlijke mozzarella, pomodorisaus en gegarneerd met runderhaas (Bresoala uit Valtellinastreek in Lombardije), rucola, pijnboompitten, gedroogde tomaten en grana padano (parmezaan uit povlakte)',
+                description: 'Fresh thin pizza in a brick oven baked with 100% natural mozzarella, pomodori sauce and topped with beef tenderloin (Bresoala from Valtellina region in Lombardy), arugula, pine nuts, dried tomatoes and grana padano (parmesan from po plain).',
                 price:       '€ 11,50 <i>-15%</i>',
-                img:         'images/vierkant-pizza.jpg'
+                img:         'images/pizza-list-2.jpg'
             },
             {
-                title:       'Pizza Carpaccio di Bresoala',
-                description: 'Verse dunne pizza in steenoven gebakken met 100% natuurlijke mozzarella, pomodorisaus en gegarneerd met runderhaas (Bresoala uit Valtellinastreek in Lombardije), rucola, pijnboompitten, gedroogde tomaten en grana padano (parmezaan uit povlakte)',
+                title:       'Pizza Mushroom',
+                description: 'Fresh thin pizza in a brick oven baked with 100% natural mozzarella, pomodori sauce and topped with beef tenderloin (Bresoala from Valtellina region in Lombardy), arugula, pine nuts, dried tomatoes and grana padano (parmesan from po plain).',
                 price:       '€ 11,50 <i>-15%</i>',
-                img:         'images/vierkant-pizza.jpg'
+                img:         'images/pizza-list-3.jpg'
             },
             {
-                title:       'Pizza Carpaccio di Bresoala',
-                description: 'Verse dunne pizza in steenoven gebakken met 100% natuurlijke mozzarella, pomodorisaus en gegarneerd met runderhaas (Bresoala uit Valtellinastreek in Lombardije), rucola, pijnboompitten, gedroogde tomaten en grana padano (parmezaan uit povlakte)',
+                title:       'Pizza Salad',
+                description: 'Fresh thin pizza in a brick oven baked with 100% natural mozzarella, pomodori sauce and topped with beef tenderloin (Bresoala from Valtellina region in Lombardy), arugula, pine nuts, dried tomatoes and grana padano (parmesan from po plain).',
                 price:       '€ 11,50 <i>-15%</i>',
-                img:         'images/vierkant-pizza.jpg'
+                img:         'images/pizza-list-4.jpg'
             },
             {
-                title:       'Pizza Carpaccio di Bresoala',
-                description: 'Verse dunne pizza in steenoven gebakken met 100% natuurlijke mozzarella, pomodorisaus en gegarneerd met runderhaas (Bresoala uit Valtellinastreek in Lombardije), rucola, pijnboompitten, gedroogde tomaten en grana padano (parmezaan uit povlakte)',
+                title:       'Pizza Onion',
+                description: 'Fresh thin pizza in a brick oven baked with 100% natural mozzarella, pomodori sauce and topped with beef tenderloin (Bresoala from Valtellina region in Lombardy), arugula, pine nuts, dried tomatoes and grana padano (parmesan from po plain).',
                 price:       '€ 11,50 <i>-15%</i>',
-                img:         'images/vierkant-pizza.jpg'
+                img:         'images/pizza-list-5.jpg'
             },
             
         ],

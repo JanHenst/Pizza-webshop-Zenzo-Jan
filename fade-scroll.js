@@ -25,7 +25,7 @@ var animateHTML = function () {
                 );
             }
 
-            if ((positionFromTop - windowHeight > 1) || (positionFromTop < -70)) {
+            if ((positionFromTop - windowHeight > 1) || (positionFromTop < -400)) {
                 elems[i].className = elems[i].className.replace(
                     'fade-in-element',
                     'fadeItem'
