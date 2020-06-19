@@ -240,7 +240,7 @@ a {
 /*sidebar content*/
 .shopping-cart {
     width: 0px;
-    overflow: hidden;
+    overflow: auto;
 }
 .show-order {
     transition: ease 1s width;

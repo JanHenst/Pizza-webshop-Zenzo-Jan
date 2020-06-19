@@ -53,22 +53,24 @@
                 <div class="order">
                     <div class="order-item-container">
                         <div id="cartItems">
-                            <div class="order-item" 
-                                 v-for="(cartPizza, index) in cartPizzas" 
-                                 :key="cartPizza.title + index">
-                                <div class="order-item-bigger-content-container">
-                                    <div class="order-item-img-container">
-                                        <img :src="cartPizza.img" alt="">
+                            <transition-group name="list">
+                                <div class="order-item" 
+                                    v-for="(cartPizza, index) in cartPizzas" 
+                                    :key="cartPizza.title + index">
+                                    <div class="order-item-bigger-content-container">
+                                        <div class="order-item-img-container">
+                                            <img :src="cartPizza.img" alt="">
+                                        </div>
+                                        <div class="order-item-content-container">
+                                            <p>{{cartPizza.title}}</p>
+                                            <button v-on:click.prevent="deleteObject(index)" class="order-item-button">Remove</button>
+                                        </div>
                                     </div>
-                                    <div class="order-item-content-container">
-                                        <p>{{cartPizza.title}}</p>
-                                        <button v-on:click.prevent="deleteObject(index)" class="order-item-button">Remove</button>
+                                    <div class="order-item-price-container">
+                                        <p>€ {{cartPizza.price}}</p>
                                     </div>
                                 </div>
-                                <div class="order-item-price-container">
-                                    <p>€ {{cartPizza.price}}</p>
-                                </div>
-                            </div>
+                            </transition-group>
                         </div>
                     </div>
                     <p>Total: € 80,50</p>
