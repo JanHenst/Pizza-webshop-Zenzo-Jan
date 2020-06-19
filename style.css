@@ -783,6 +783,7 @@ a {
     color: #fff;
     cursor: pointer;
     font-weight: bold;
+    margin-left: 3px;
 }
 
 @media (max-width: 767px) {
@@ -1527,6 +1528,9 @@ body#top .no-margin {
     }
     .cart-info-container {
         width: 50%;
+    }
+    .footer.payment-sub-footer {
+        margin-top: 400px;
     }
 }
 @media (min-width: 1550px) {
